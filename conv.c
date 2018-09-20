@@ -1,32 +1,51 @@
 #include<stdio.h>
 int main()
 {
-  int a,b;
-  for(a=0;a<=1;a++)
-  {
-    for (b=1;b<=12;b++)
-    {
-      printf("%d:00 ",b);
-      if(a==0)
-      {
-        if(b<=6)
-        printf("am midnight \n");
-        else if (b>6&&b<12)
-        printf("am morning \n");
-        else
-        printf("pm noon \n");
-      }
-      else
-      {
-        if(b<=5)
-        printf("pm noon \n");
-        else if (b>5&&b<9)
-        printf("pm evening \n");
-        else if (b>=9&&b<12)
-        printf("pm night \n");
-        else
-        printf("am midnight \n");
-      }
-    }
-  }
+	int a,b,c,d;
+	printf("Input: ");
+	scanf("%d",&a);
+	c=a;
+	for(b=0,d=1;c>0;d=d*10,c=c/2)
+	{
+		b=b+(c%2)*d;
+	}
+	printf("The number %d in binary is %d \n",a,b);
+	for(b=0,d=1,c=a;c>0;d=d*10,c=c/8)
+	{
+		b=b+(c%8)*d;
+	}
+	printf("The number %d in octal is %d \n",a,b);
+// for(c=a;c>0;c=c/16)
+// 	{
+// 		d=c%16;
+// 		if(d>=10)
+// 		{
+// 			switch(d)
+// 			{
+// 				case 10:
+// 				printf("a");
+// 				break;
+// 				case 11:
+// 				printf("b");
+// 				break;
+// 				case 12:
+// 				printf("c");
+// 				break;
+// 				case 13:
+// 				printf("d");
+// 				break;
+// 				case 14:
+// 				printf("e");
+// 				break;
+// 				default:
+// 				printf("f");
+// 				break;
+// 			}
+// 		}
+// 		else
+// 		printf("%d",d);
+// 	}
+// 	printf(" \n");
+  printf("%d in hexadecimal is %X \n",a,a);
+	return 0;
 }
