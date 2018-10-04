@@ -2,8 +2,10 @@
 #include<math.h>
 int main()
 {
-    int a=0,b,c,d,e;
-    for(e=1;a<5;e++)
+    int a=0,b,c,d,e,n;
+    printf("input: ");
+    scanf("%d",&n);
+    for(e=1;a<n;e++)
     {
       b=0;
        for (c=1; c<=pow(e,1.0/3); c++)
