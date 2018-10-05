@@ -17,4 +17,4 @@ void main()
   else
   printf("%d",compare(a,b));
 }  
-  
+
