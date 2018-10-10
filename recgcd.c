@@ -1,5 +1,13 @@
 #include<stdio.h>
-int a,b;
+int gcd(int,int);
+void main()
+{
+  int res=0,a,b;
+  printf("input: ");
+  scanf("%d %d",&a,&b);
+  res=gcd(a,b);
+  printf("greatest common divisor is: %d \n",res);
+}
 int gcd(int a,int b)
 {
   for(;a!=b;)
@@ -11,11 +19,3 @@ int gcd(int a,int b)
   }
   return a;
 }
-int main()
-{
-  printf(ïnput: ");
-  scanf("%d %d",&a,&b)
-  printf("greatest common divisor is: %d",gcd(a,b));
-  return 0;
-}  
-  
