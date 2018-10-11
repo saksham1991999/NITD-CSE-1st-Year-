@@ -1,9 +1,10 @@
 #include<stdio.h>
-int swap(int a,int b)
+void swap(int a,int b)
 {
   a=a+b;
   b=b-a;
   a=b-a;
+  printf("after swapping %d %d \n",a,b);
 }
 int main()
 {
@@ -11,6 +12,5 @@ int main()
   printf("input: ");
   scanf("%d %d",&a,&b);
   printf("before swapping %d %d \n",a,b);
-  a,b=swap(a,b);
-  printf("after swapping %d %d \n",a,b);
+  swap(a,b);
 }
