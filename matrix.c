@@ -5,7 +5,7 @@ int sum(int a,int b)
 }
 int main()
 {
-  int a[100][100],b[100][100],c[100][100],d,e,p,q,i,j,k,l=0,f,flag=0;
+  int a[100][100],b[100][100],c[100][100],d,e,p,q,i,j,k,f,flag=0;
   printf("define matrix 1 , no. of rows and colums are? \n");
   scanf("%d%d",&d,&e);
   printf("define first matrix \n");
