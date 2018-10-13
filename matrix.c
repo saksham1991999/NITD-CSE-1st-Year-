@@ -1,12 +1,11 @@
 #include<stdio.h>
-int sum(int a,int b);
+int sum(int a,int b)
 {
   return (a+b);
 }
 int main()
 {
-  int a[100][100],b[100][100],c[100][100],d,e,p,q,i,j,k,l=0;
-  printf("select operation: \n(1)Sum \n(2)Difference \n(3)product \n(4)Transpose\n")
+  int a[100][100],b[100][100],c[100][100],d,e,p,q,i,j,k,l=0,f,flag=0;
   printf("define matrix 1 , no. of rows and colums are? \n");
   scanf("%d%d",&d,&e);
   printf("define first matrix \n");
@@ -18,6 +17,7 @@ int main()
       scanf("%d",&a[i][j]);
     }
   }
+  printf("select operation: \n(1)Sum \n(2)Difference \n(3)product \n(4)Transpose\n");
   scanf("%d",&f);
   switch(f)
   {
@@ -65,47 +65,55 @@ int main()
         printf("Enter elements of second matrix\n");
         for(i=0;i<p;i++)
         {
+          printf("enter values for row %d\n",i+1);
           for(j=0;j<q;j++)
           {
             scanf("%d", &b[i][j]);
           }
         }
+        for(i=0;i<d;i++)
+        {
+          for(j=0;j<q;j++)
+          {
+            for(k=0;k<p;k++)
+            {
+              flag=flag+a[i][j]*b[k][j];
+            }
+          c[i][j]=flag;
+          flag=0;
+          }
+        }
       }
       else
-      printf("The matrices can't be multiplied with each other.\n");
-      for(i=0;c<m;i++)
       {
-        for(j=0;d<q;j++)
-        {
-          for(k=0;k<p;k++)
-          {
-            l=l+a[i][j]*b[k][j];
-          }
-        c[i][j]=l;
-        l=0;
-        }
+        printf("The matrices can't be multiplied with each other.\n");
+        flag=1;
       }
       break;
     case 4:
-      for(i=0;i<m;i++)
+      for(i=0;i<d;i++)
       {
-        for(j=0;j<n;j++)
+        for(j=0;j<e;j++)
         {
-          c[j][i] = matrix[i][j];
+          c[j][i] = a[i][j];
         }
       }
       break;
     default:
       printf("invalid input \n");
+      flag=1;
       break;
   }
-  printf("output: \n");
-  for(i=0;i<d;i++)
+  if(flag!=1)
   {
-    for(j=0;j<e;j++)
+    printf("output: \n");
+    for(i=0;i<d;i++)
     {
-      printf("%d ",a[i][j]);
+      for(j=0;j<e;j++)
+      {
+        printf("%d ",c[i][j]);
+      }
+      printf(" \n");
     }
-    printf(" /n");
   }
 }
