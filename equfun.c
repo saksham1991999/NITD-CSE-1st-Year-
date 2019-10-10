@@ -1,5 +1,7 @@
-#include<stdio.h>
-int compare(int a,int b)
+//program to compare 2 integers
+#include<iostream>         
+using namespace std;
+int compare(int a,int b)            //function returns 0 if 2 numbers are same else returns the greater of them
 {
   int c;
   if (a==b)
@@ -11,10 +13,10 @@ int compare(int a,int b)
 void main()
 {
   int a,b;
-  scanf("%d %d",&a,&b);
+  cin>>a>>b;
   if (compare(a,b)=0)
-  printf("equal");
+  cout<<"equal";
   else
-  printf("%d",compare(a,b));
+  cout<<compare(a,b);
 }  
 
