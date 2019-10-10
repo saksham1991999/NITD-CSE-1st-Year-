@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include<iostream>
+using namespace std;
 int main()
 {
   int a,b,c;
@@ -8,7 +9,7 @@ int main()
     {
       for(c=1;c<=3;c++)
       {
-        printf("%d%d%d \n",a,b,c);
+        cout<<a<<b<<c;
       }
     }
   }
