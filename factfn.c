@@ -3,10 +3,10 @@ int fact(int);
 void main()
 {
   int a,b;
-  printf("input: ");
+  printf("Enter the number to find the factorial of: ");
   scanf("%d",&a);
   b=fact(a);
-  printf("%d!= %d\n",a,b);
+  printf("%d! = %d\n",a,b);
 }
 int fact(int a)
 {
