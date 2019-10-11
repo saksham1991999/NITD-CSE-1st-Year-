@@ -17,7 +17,7 @@ int fib(int c,int t)
 int main()
 {
   int t;
-  printf("How many terms? ");
+  printf("How many terms would you like to generate? ");
   scanf("%d",&t);
   fib(1,t+1);
 }
